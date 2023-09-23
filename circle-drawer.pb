@@ -124,7 +124,7 @@ Procedure CanvasRightClick()
 EndProcedure
 
 Procedure ShowMainWindow() 
-  If OpenWindow(#MainWin, #PB_Ignore, #PB_Ignore, 400, 300, "Circle Drawer", #PB_Window_ScreenCentered | #PB_Window_SystemMenu)
+  If OpenWindow(#MainWin, #PB_Ignore, #PB_Ignore, 400, 300, "7GUI - Circle Drawer task in Purebasic", #PB_Window_ScreenCentered | #PB_Window_SystemMenu)
     ButtonGadget(#UndoButton,  135,  5,  60,  25, "Undo")
     ButtonGadget(#RedoButton,  205,  5,  60,  25, "Redo")
     CanvasGadget(#Canvas,        5, 35, 390, 260, #PB_Canvas_Border)
@@ -141,7 +141,8 @@ ShowMainWindow() ; a window must be open for the eventloop to run
 Repeat:Until WaitWindowEvent() = #PB_Event_CloseWindow   
 End
 ; IDE Options = PureBasic 6.02 LTS (Windows - x64)
-; CursorPosition = 22
+; CursorPosition = 126
+; FirstLine = 77
 ; Folding = --
 ; EnableXP
 ; DPIAware

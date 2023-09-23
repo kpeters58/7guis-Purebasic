@@ -1,4 +1,4 @@
-﻿; PUREBASIC: This results in a 62 KB executable on Win64 (didn't check sizes on MacOS & Linux)
+﻿; PUREBASIC: This results in a 65 KB executable on Win64 (didn't check sizes on MacOS & Linux)
 ; the reference code in SCALA also rounds ...
 
 EnableExplicit
@@ -31,7 +31,7 @@ Procedure UpdateWindow()
 EndProcedure
 
 Procedure ShowMainWindow() 
-  If OpenWindow(#MainWin, #PB_Ignore, #PB_Ignore, 330, 40, "Temperature Converter", #PB_Window_ScreenCentered | #PB_Window_SystemMenu)
+  If OpenWindow(#MainWin, #PB_Ignore, #PB_Ignore, 330, 40, "7GUI - Temperature Converter task in Purebasic", #PB_Window_ScreenCentered | #PB_Window_SystemMenu)
     StringGadget(#EditboxCelsius,      5, 5, 80, 25, "", #PB_String_Numeric) 
     TextGadget(#PB_Any,              100, 8, 60, 25, "Celsius =")
     StringGadget(#EditboxFahrenheit, 165, 5, 80, 25, "", #PB_String_Numeric) 
@@ -45,10 +45,10 @@ EndProcedure
 ShowMainWindow() ; a window must be open for the eventloop to run
 Repeat:Until WaitWindowEvent() = #PB_Event_CloseWindow  
 ; IDE Options = PureBasic 6.02 LTS (Windows - x64)
-; CursorPosition = 37
+; CursorPosition = 2
 ; Folding = -
 ; Optimizer
 ; EnableXP
 ; Executable = TemperatureConverter.exe
 ; DisableDebugger
-; Compiler = PureBasic 6.00 Beta 6 (Windows - x64)
+; Compiler = PureBasic 6.02 LTS (Windows - x64)

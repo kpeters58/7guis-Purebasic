@@ -1,4 +1,4 @@
-﻿; PUREBASIC: This results in a 72 KB executable on WIN64 (didn't check sizes on MacOS & Linux)
+﻿; PUREBASIC: This results in a 77 KB executable on WIN64 (didn't check sizes on MacOS & Linux)
 
 EnableExplicit
 
@@ -57,12 +57,12 @@ EndProcedure
 
 
 Procedure ShowMainWindow() 
-  If OpenWindow(#MainWin, #PB_Ignore, #PB_Ignore, 200, 130, "Book Flight (ISO 8601)", #PB_Window_ScreenCentered | #PB_Window_SystemMenu)
+  If OpenWindow(#MainWin, #PB_Ignore, #PB_Ignore, 260, 130, "7GUI - Flight Booker task in Purebasic", #PB_Window_ScreenCentered | #PB_Window_SystemMenu)
     ComboBoxGadget(#DropdownFlightType, 5,  5, 190, 25) 
     AddGadgetItem(#DropdownFlightType, -1, "one-way flight")  
     AddGadgetItem(#DropdownFlightType, -1, "return flight") 
     SetGadgetText(#DropdownFlightType, GetGadgetItemText(#DropdownFlightType, 0))
-    StringGadget(#EditboxFirstDate,    5, 35, 190, 25, "2020-02-14") ; arbitray date as per rules - we use ISO8601 date format as everyone should
+    StringGadget(#EditboxFirstDate,    5, 35, 190, 25, "2020-02-14") ; arbitray date as per rules - we use RFC3339/ISO8601 date format as everyone should
     StringGadget(#EditboxSecondDate,   5, 65, 190, 25, "2020-02-14"): DisableGadget(#EditboxSecondDate, #True) ; initially off as per rules 
     ButtonGadget(#ButtonBook,          5, 95, 190, 25, "Book")       ; button is initially enabled as the defaults are all valid  
     ;    
@@ -77,8 +77,8 @@ EndProcedure
 ShowMainWindow() ; a window must be open for the eventloop to run
 Repeat:Until WaitWindowEvent() = #PB_Event_CloseWindow  
 ; IDE Options = PureBasic 6.02 LTS (Windows - x64)
-; CursorPosition = 19
-; FirstLine = 5
+; CursorPosition = 58
+; FirstLine = 6
 ; Folding = --
 ; Optimizer
 ; EnableXP

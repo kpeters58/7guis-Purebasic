@@ -133,7 +133,7 @@ EndProcedure
 Procedure ShowMainWindow() 
   Protected gheight = 22
   
-  If OpenWindow(#MainWin, #PB_Ignore, #PB_Ignore, 320, 200, "7GUI CRUD Example in Purebasic", #PB_Window_ScreenCentered | #PB_Window_SystemMenu)
+  If OpenWindow(#MainWin, #PB_Ignore, #PB_Ignore, 320, 200, "7GUI - CRUD task in Purebasic", #PB_Window_ScreenCentered | #PB_Window_SystemMenu)
     TextGadget(#FilterLabel,         10,  13,  60, gheight, "Filter")
     StringGadget(#FilterEditbox,     50,  10,  50, gheight, ""): GadgetToolTip(#FilterEditbox, "Lastname starts with")
     ListViewGadget(#NamesListview,   10,  45, 140, 110) ; defaults to single select, which is what we want here
@@ -159,8 +159,8 @@ EndProcedure
 ShowMainWindow() ; a window must be open for the eventloop to run
 Repeat:Until WaitWindowEvent() = #PB_Event_CloseWindow   
 ; IDE Options = PureBasic 6.02 LTS (Windows - x64)
-; CursorPosition = 109
-; FirstLine = 71
+; CursorPosition = 113
+; FirstLine = 99
 ; Folding = --
 ; Markers = 86
 ; EnableXP
